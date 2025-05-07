@@ -1,34 +1,55 @@
+/* Document Reset */
 * {
   box-sizing: border-box;
   margin: 0;
 }
+/* End Document Reset */
 
-.social-icon {
-  width: 20px;
-}
-
+/* Section: About me */
 .portfolio-image-container {
-  /* margin: 20px; */
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
-.portfolio-picture {
-  position: relative;
+.portfolio-image {
+  margin-top: 50px;
+  border-radius: 30px;
+  max-width: 500px;
 }
 
 .portfolio-name-text {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 80%;
+  color: white;
+  font-size: 3.5rem;
 }
 
-/* .name-text {
-  transform: translateX(50%);
-  color: white;
-  position: fixed;
-  top: 75%;
-  right: 50%;
-  font-size: 3.2em;
-  text-wrap: nowrap;
-} */
+.about-me-container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.about-me-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.about-me-text {
+  font-size: 1.5rem;
+  margin: 0 30px;
+}
+
+.socials-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px auto;
+  max-width: 250px;
+}
+
+.social-icon {
+  /* margin: 30px; */
+  width: 30px;
+}
+/* End Section: About me */
