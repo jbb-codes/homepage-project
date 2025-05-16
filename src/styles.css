@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Playfair";
+  src: url(/fonts/Playfair/Playfair-VariableFont_opsz\,wdth\,wght.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
 /* Document Reset */
 * {
   box-sizing: border-box;
@@ -9,8 +19,6 @@
 .title {
   font-size: 2.7rem;
   text-align: center;
-  margin-top: 80px;
-  margin-bottom: 40px;
 }
 
 .icon {
@@ -19,39 +27,40 @@
 /* End Global */
 
 /* Section: About me */
-
-/* .bg-square {
-  background: linear-gradient(33deg, #6cacff, #8debff);
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  transform-origin: top left;
-  transform: translate(325px, -300px) rotate(45deg) scale(6.55);
-} */
+.about-me-section {
+  font-family: Playfair;
+  background: linear-gradient(160deg, #367cd8 40%, white calc(40% + 2px));
+}
 
 .portfolio-image-container {
   display: flex;
   justify-content: center;
   position: relative;
+  height: 100%;
 }
 
 .portfolio-image {
-  margin-top: 50px;
   border-radius: 30px;
   max-width: 500px;
-  box-shadow: 2px 3px 8px 3px #ccc;
+  vertical-align: bottom;
+  margin-top: 50px;
 }
 
 .portfolio-name-text {
   position: absolute;
   top: 80%;
   color: white;
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 10vw, 6rem);
 }
 
 .about-me-container {
-  margin: 0 auto;
+  margin: 50px auto 70px auto;
   max-width: 800px;
+  background-color: white;
+}
+
+.about-me-title {
+  margin: 20px 30px;
 }
 
 .about-me-text {
@@ -68,14 +77,16 @@
 /* End Section: About me */
 
 /* Section: My work */
+.my-work-title {
+  margin-bottom: 30px;
+}
 .projects-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 80px 100px;
   max-width: 70vw;
-  margin: 0 auto;
-  margin-bottom: 10vh;
+  margin: 0 auto 150px auto;
 }
 
 .project-container {
@@ -108,7 +119,7 @@
 
 .project-description {
   font-size: 1.2rem;
-  margin: 15px;
+  margin: 10px 15px 60px 15px;
 }
 /* End Section: My work */
 
@@ -116,15 +127,12 @@
 .contact-me-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  background-color: rgb(11, 121, 154);
+  justify-content: space-between;
+  gap: 35px;
+  font-family: Playfair;
+  background-color: #3171c4;
   color: white;
-  padding: 40px;
-}
-
-.contact-me-container .contact-me__social-icons {
-  align-self: center;
-  gap: 30px;
+  padding: 10px 30px 30px 30px;
 }
 
 .contact-me__title {
@@ -138,17 +146,41 @@
 
 .contact-me__social-icons {
   display: flex;
+  gap: 30px;
+  align-self: center;
 }
 
 .contact-me__social-icons .social-icon {
   width: 35px;
 }
+
+.contact-me__phone-container {
+  display: flex;
+  gap: 15px;
+}
+
+.contact-me__email-container {
+  display: flex;
+  gap: 15px;
+}
+
+.contact-me__connect-icons {
+  fill: white;
+  width: 30px;
+}
+
+.contact-me__image-container {
+  display: none;
+}
 /* End Section: Contact me */
 
 /* Tablet media query */
-@media (min-width: 820px) {
+@media (min-width: 885px) {
+  /* Tablet Section: About me */
   .about-me-section {
     display: flow-root;
+    padding: 50px;
+    background: linear-gradient(170deg, #367cd8 60%, white calc(60% + 1px));
   }
 
   .portfolio-image-container {
@@ -156,32 +188,133 @@
     float: left;
     margin-left: 90px;
     margin-right: 25px;
+    border-radius: 30px;
   }
 
   .portfolio-name-text {
-    font-size: 6rem;
-    color: black;
     top: 10%;
-    left: 45%;
-    /* text-wrap: nowrap; */
+    /* left: 455px; */
+    left: clamp(455px, 45%, 50%);
   }
 
   .about-me-container {
-    margin-top: 50px;
-    box-shadow: 2px 3px 8px 3px #ccc;
-  }
-
-  .about-me-title {
     margin-top: 300px;
-    padding-top: 100px;
-  }
-
-  .about-me-text {
-    padding-bottom: 90px;
+    box-shadow: 2px 3px 8px 3px #ccc;
+    padding: 80px 0 90px 0;
   }
 
   .socials-container {
     display: none;
   }
+  /* End Tablet Section: About me */
+
+  /* Tablet Section: My work */
+  .projects-container {
+    margin: 0 auto 250px auto;
+  }
+  /* End Tablet Section: My work */
+
+  /* Tablet Section: Contact me */
+  .contact-me-section {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3171c4;
+    padding: 50px;
+  }
+
+  .contact-me-container {
+    height: 500px;
+  }
+
+  .contact-me__title {
+    text-align: left;
+    margin-top: 60px;
+  }
+
+  .contact-me__social-icons {
+    margin-right: auto;
+  }
+
+  .contact-me--text {
+    font-size: 1.4rem;
+  }
+
+  .contact-me__phone-email-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .contact-me__social-icon {
+    width: 40px;
+  }
+
+  .contact-me__image-container {
+    display: block;
+  }
+
+  .contact-me__portfolio-image {
+    border-radius: 20px;
+    right: 40px;
+    max-width: 350px;
+  }
+  /* End Tablet Section: Contact me */
 }
 /* End Tablet media query */
+
+/* Desktop media query */
+@media (min-width: 1201px) {
+  /* Desktop Section: About me */
+  .about-me-section {
+    display: flex;
+    padding: 50px;
+  }
+
+  .portfolio-image-container {
+    float: none;
+    margin-right: 0;
+    margin-left: auto;
+    display: block;
+    position: relative;
+  }
+
+  .about-me-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 500px;
+    margin-top: 170px;
+    margin-left: 0;
+    padding: 50px 0 10px 0;
+  }
+
+  .portfolio-name-text {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-wrap: nowrap;
+  }
+
+  .socials-container {
+    display: flex;
+    gap: 30px;
+    margin-right: 40px;
+  }
+  /* End Desktop Section: About me */
+
+  /* Desktop Section: My work */
+  .my-work-title {
+    margin-top: 100px;
+  }
+  /* End Desktop Section: My work */
+
+  /* Desktop Section: Contact me */
+  .contact-me__portfolio-image {
+    max-width: 450px;
+    margin-right: 30px;
+    border-radius: 0;
+  }
+  /* End Desktop Section: Contact me */
+}
+/* End Desktop media query */
