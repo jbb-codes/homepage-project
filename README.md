@@ -9,17 +9,20 @@ This portfolio website is a clean, responsive design built with modern web techn
 ## Features
 
 ### Responsive Design
+
 - Mobile-first approach with breakpoints for tablet (885px) and desktop (1201px)
 - Fluid typography and responsive images using responsive image techniques
 - Adaptive layout that reorganizes content based on screen size
 
 ### About Me Section
+
 - Personal introduction with a professional photo
 - Brief bio text to introduce yourself to visitors
 - Social media links to connect with you on other platforms
 
 ### Projects Showcase
-- Grid layout displaying your portfolio projects
+
+- Flexbox layout displaying your portfolio projects
 - Each project includes:
   - Screenshot/preview image
   - Project title
@@ -28,6 +31,7 @@ This portfolio website is a clean, responsive design built with modern web techn
   - Brief project description
 
 ### Contact Section
+
 - Professional contact information
 - Physical address
 - Phone number and email
@@ -39,11 +43,10 @@ This portfolio website is a clean, responsive design built with modern web techn
 - **HTML5** - Semantic markup for structure
 - **CSS3** - Custom styling with:
   - Flexbox for layout
-  - CSS Grid for project display
   - CSS Variables
   - Media queries for responsive design
   - Custom web fonts (Playfair and Roboto)
-- **JavaScript** - For interactivity
+- **JavaScript** - For Webpack CSS import
 - **Webpack** - Module bundling and development environment
 - **NPM Packages**:
   - css-loader
@@ -57,6 +60,7 @@ This portfolio website is a clean, responsive design built with modern web techn
 To set up this project locally, follow these steps:
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/yourusername/homepage-project.git
    cd homepage-project
